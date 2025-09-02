@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background: #eef5fe;
+}
+
+/* ---------Conjunto dos pontos--------- */
+.container{
+    display: flex;
+    column-gap: 10px; /*define a distancia entre as colunas*/
+}
+
+/*--------- Estilo do Ponto---- */
+.container .ponto{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #008ae6;
+    box-shadow: (0 5px 10px rgba (0, 0, 0, 0.1));
+    animation: animate 1s ease-in-out infinite alternate; /*define como vai acontecer a animação*/
+}
+.ponto:nth-child(1){/*seleciona elementos com base na posição deles*/
+    animation-delay: -0.25s;
+}/*seleciona elementos com base na posição deles*/
+
+.ponto:nth-child(2){
+    background: #e60000;
+     animation-delay: -0.5s;
+}
+
+.ponto:nth-child(3){
+    background: #ffcc00;
+     animation-delay: -0.75s;
+}
+
+.ponto:nth-child(4){
+    background: #008800;
+     animation-delay: -1s;
+}
+@keyframes animate{ /* Isso faz o ponto 'pular' e descer */
+    0% { /* 0% indica o começo da animação */
+        transform: translateY(5); /* Pra pular ele sobe 10px */
+    }
+    100% {/* 100% indica o final ja em 5px */
+        transform: translateY(20px);/* Pra descer desce 5px */
+    }
+}
